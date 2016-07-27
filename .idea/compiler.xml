@@ -19,6 +19,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Transaction-App_main" target="1.8" />
+      <module name="Transaction-App_test" target="1.8" />
       <module name="youtube_main" target="1.8" />
       <module name="youtube_test" target="1.8" />
     </bytecodeTargetLevel>

@@ -46,21 +46,7 @@ public class PersonController {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Your app is unhealthy \n");
     }
 
-    @RequestMapping(value = "/transactions")
-    public ResponseEntity<ArrayList<String>> transEndpoint() {
-        String[] array = ps.getPendingTransactions().keySet().toArray(new String[ps.getAll().size()]);
-        if (ps.getPendingTransactions().size() != 0) {
-            return ResponseEntity.status(HttpStatus.OK).body(transactionOutput());
-        }
-        return ResponseEntity.status(HttpStatus.NO_CONTENT).body(new ArrayList<String>());
-    }
 
-    public ArrayList<String> transactionOutput() {
-        ArrayList<String> output = new ArrayList<String>();
-        output.add("Pending Transactions Left:");
-        for (String id : ps.getPendingTransactions().keySet()) {
-            output.add(ps.getPerson(id).getFirstName() + " " + Integer.toString(ps.getPerson(id).getTransaction()) + " ");
-        }
-        return output;
-    }
+
+
 }

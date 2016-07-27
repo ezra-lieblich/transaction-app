@@ -13,7 +13,6 @@ import model.Person;
 public class PersonService {
     private Hashtable<String, Person> transactions = new Hashtable<String, Person>();
     private Hashtable<String, Person> pending_transactions = new Hashtable<String, Person>();
-    private int count;
     public PersonService() {
         Person p = new Person();
         p.setId("1");
@@ -71,7 +70,6 @@ public class PersonService {
         p.setFirstName("Matt");
         transactions.put("8", p);
         pending_transactions.put("8", p);
-        count = pending_transactions.size();
     }
     public Person getPerson(String id) {
         if (transactions.containsKey(id))
@@ -87,9 +85,8 @@ public class PersonService {
         return pending_transactions;
     }
 
-    public Hashtable<String, Person> processTrans() {
-        pending_transactions.remove(Integer.toString(count));
-        count--;
+    public Hashtable<String, Person> processTrans(String id) {
+        pending_transactions.remove(id);
         return pending_transactions;
     }
 }
