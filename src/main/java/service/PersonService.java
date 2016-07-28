@@ -34,42 +34,6 @@ public class PersonService {
         p.setFirstName("john");
         transactions.put("3", p);
         pending_transactions.put("3", p);
-
-        p = new Person();
-        p.setId("4");
-        p.setTransaction(35);
-        p.setFirstName("Al");
-        transactions.put("4", p);
-        pending_transactions.put("4", p);
-
-        p = new Person();
-        p.setId("5");
-        p.setTransaction(120);
-        p.setFirstName("Johnathon");
-        transactions.put("5", p);
-        pending_transactions.put("5", p);
-
-
-        p = new Person();
-        p.setId("6");
-        p.setTransaction(93);
-        p.setFirstName("Craig");
-        transactions.put("6", p);
-        pending_transactions.put("6", p);
-
-        p = new Person();
-        p.setId("7");
-        p.setTransaction(111);
-        p.setFirstName("Bill");
-        transactions.put("7", p);
-        pending_transactions.put("7", p);
-
-        p = new Person();
-        p.setId("8");
-        p.setTransaction(67);
-        p.setFirstName("Matt");
-        transactions.put("8", p);
-        pending_transactions.put("8", p);
     }
     public Person getPerson(String id) {
         if (transactions.containsKey(id))
@@ -88,5 +52,10 @@ public class PersonService {
     public Hashtable<String, Person> processTrans(String id) {
         pending_transactions.remove(id);
         return pending_transactions;
+    }
+
+    public void addTrans(Person person){
+        transactions.put(person.getId(), person);
+        pending_transactions.put(person.getId(), person);
     }
 }

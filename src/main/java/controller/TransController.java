@@ -25,8 +25,26 @@ public class TransController {
 
     @RequestMapping(method = RequestMethod.GET)
     @ResponseBody
-    public Hashtable<String, Person> transEndpoint() {
-        return ps.getPendingTransactions();
+    public ResponseEntity<ArrayList<String>> transEndpoint() {
+        String[] array = ps.getPendingTransactions().keySet().toArray(new String[ps.getAll().size()]);
+        if (ps.getPendingTransactions().size() != 0) {
+            return ResponseEntity.status(HttpStatus.OK).body(transactionOutput());
+        }
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).body(new ArrayList<String>());
+    }
+
+    public ArrayList<String> transactionOutput() {
+        ArrayList<String> output = new ArrayList<String>();
+        output.add("Pending Transactions Left:");
+        for (String id : ps.getPendingTransactions().keySet()) {
+            output.add("{id: " + ps.getPerson(id).getId() + " name: " + ps.getPerson(id).getFirstName() +"}");
+        }
+        return output;
+    }
+
+    @RequestMapping(method = RequestMethod.POST)
+    void createTrans(@RequestBody Person person){
+        ps.addTrans(person);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)

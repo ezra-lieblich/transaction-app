@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.001s</div>
+<div class="counter">0s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">contextLoads</td>
-<td>0.001s</td>
+<td>0s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,31 +87,31 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>11:26:22.163 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class demo.DemoApplicationTests]
-11:26:22.167 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-11:26:22.171 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-11:26:22.179 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [demo.DemoApplicationTests] from class [org.springframework.test.context.web.WebTestContextBootstrapper]
-11:26:22.195 [Test worker] DEBUG org.springframework.test.context.web.WebTestContextBootstrapper - Found explicit ContextLoader class [org.springframework.boot.test.SpringApplicationContextLoader] for context configuration attributes [ContextConfigurationAttributes@188b8798 declaringClass = 'demo.DemoApplicationTests', classes = '{class demo.DemoApplication}', locations = '{}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.boot.test.SpringApplicationContextLoader']
-11:26:22.200 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [demo.DemoApplicationTests]: class path resource [demo/DemoApplicationTests-context.xml] does not exist
-11:26:22.200 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [demo.DemoApplicationTests]: class path resource [demo/DemoApplicationTestsContext.groovy] does not exist
-11:26:22.200 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [demo.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-11:26:22.201 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [demo.DemoApplicationTests]
-11:26:22.204 [Test worker] DEBUG org.springframework.test.context.web.WebTestContextBootstrapper - @TestExecutionListeners is not present for class [demo.DemoApplicationTests]: using defaults.
-11:26:22.209 [Test worker] INFO org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-11:26:22.213 [Test worker] INFO org.springframework.test.context.web.WebTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
-11:26:22.216 [Test worker] INFO org.springframework.test.context.web.WebTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
-11:26:22.217 [Test worker] INFO org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@154ec313, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@57bd88c9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@17a82696, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2b26ee29]
-11:26:22.219 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [demo.DemoApplicationTests]
-11:26:22.220 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [demo.DemoApplicationTests]
-11:26:22.221 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [demo.DemoApplicationTests]
-11:26:22.221 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [demo.DemoApplicationTests]
-11:26:22.223 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@58f8f6a5 testClass = DemoApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@3eb8f3af testClass = DemoApplicationTests, locations = '{}', classes = '{class demo.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null].
-11:26:22.224 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [demo.DemoApplicationTests]
-11:26:22.224 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [demo.DemoApplicationTests]
-11:26:22.270 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
-11:26:22.272 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
-11:26:22.272 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
-11:26:22.274 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [integrationTest] PropertySource with search precedence immediately lower than [systemEnvironment]
+<pre>13:58:22.310 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class demo.DemoApplicationTests]
+13:58:22.313 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+13:58:22.317 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+13:58:22.325 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [demo.DemoApplicationTests] from class [org.springframework.test.context.web.WebTestContextBootstrapper]
+13:58:22.340 [Test worker] DEBUG org.springframework.test.context.web.WebTestContextBootstrapper - Found explicit ContextLoader class [org.springframework.boot.test.SpringApplicationContextLoader] for context configuration attributes [ContextConfigurationAttributes@1716316e declaringClass = 'demo.DemoApplicationTests', classes = '{class demo.DemoApplication}', locations = '{}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.boot.test.SpringApplicationContextLoader']
+13:58:22.344 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [demo.DemoApplicationTests]: class path resource [demo/DemoApplicationTests-context.xml] does not exist
+13:58:22.345 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [demo.DemoApplicationTests]: class path resource [demo/DemoApplicationTestsContext.groovy] does not exist
+13:58:22.345 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [demo.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+13:58:22.346 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [demo.DemoApplicationTests]
+13:58:22.348 [Test worker] DEBUG org.springframework.test.context.web.WebTestContextBootstrapper - @TestExecutionListeners is not present for class [demo.DemoApplicationTests]: using defaults.
+13:58:22.354 [Test worker] INFO org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+13:58:22.358 [Test worker] INFO org.springframework.test.context.web.WebTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+13:58:22.359 [Test worker] INFO org.springframework.test.context.web.WebTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+13:58:22.362 [Test worker] INFO org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6f33e3c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4e3d563b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@6d559c69, org.springframework.test.context.support.DirtiesContextTestExecutionListener@559ac076]
+13:58:22.365 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [demo.DemoApplicationTests]
+13:58:22.365 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [demo.DemoApplicationTests]
+13:58:22.366 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [demo.DemoApplicationTests]
+13:58:22.366 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [demo.DemoApplicationTests]
+13:58:22.368 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@6d8d2bc testClass = DemoApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@31fb7e58 testClass = DemoApplicationTests, locations = '{}', classes = '{class demo.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null].
+13:58:22.369 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [demo.DemoApplicationTests]
+13:58:22.369 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [demo.DemoApplicationTests]
+13:58:22.415 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+13:58:22.416 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+13:58:22.417 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+13:58:22.418 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [integrationTest] PropertySource with search precedence immediately lower than [systemEnvironment]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -121,20 +121,22 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v1.3.6.RELEASE)
 
-2016-07-27 11:26:22.757  INFO 47037 --- [    Test worker] demo.DemoApplicationTests                : Starting DemoApplicationTests on MacBook-Pro-4.local with PID 47037 (/Users/elieblich/Transaction-App/build/classes/test started by elieblich in /Users/elieblich/Transaction-App)
-2016-07-27 11:26:22.758  INFO 47037 --- [    Test worker] demo.DemoApplicationTests                : No active profile set, falling back to default profiles: default
-2016-07-27 11:26:22.828  INFO 47037 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3aeaf06a: startup date [Wed Jul 27 11:26:22 EDT 2016]; root of context hierarchy
-2016-07-27 11:26:23.828  INFO 47037 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3aeaf06a: startup date [Wed Jul 27 11:26:22 EDT 2016]; root of context hierarchy
-2016-07-27 11:26:23.872  INFO 47037 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/]}&quot; onto public org.springframework.http.ResponseEntity&lt;java.util.Hashtable&lt;java.lang.String, model.Person&gt;&gt; controller.PersonController.index()
-2016-07-27 11:26:23.872  INFO 47037 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/transactions]}&quot; onto public org.springframework.http.ResponseEntity&lt;java.util.ArrayList&lt;java.lang.String&gt;&gt; controller.PersonController.transEndpoint()
-2016-07-27 11:26:23.873  INFO 47037 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/{id}]}&quot; onto public model.Person controller.PersonController.getPerson(java.lang.String)
-2016-07-27 11:26:23.873  INFO 47037 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/test]}&quot; onto public org.springframework.http.ResponseEntity&lt;java.lang.String&gt; controller.PersonController.testEndpoint()
-2016-07-27 11:26:23.875  INFO 47037 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/error]}&quot; onto public org.springframework.http.ResponseEntity&lt;java.util.Map&lt;java.lang.String, java.lang.Object&gt;&gt; org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2016-07-27 11:26:23.875  INFO 47037 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/error],produces=[text/html]}&quot; onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2016-07-27 11:26:23.894  INFO 47037 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2016-07-27 11:26:23.895  INFO 47037 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2016-07-27 11:26:23.916  INFO 47037 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2016-07-27 11:26:23.992  INFO 47037 --- [    Test worker] demo.DemoApplicationTests                : Started DemoApplicationTests in 1.708 seconds (JVM running for 2.286)
+2016-07-28 13:58:22.995  INFO 53559 --- [    Test worker] demo.DemoApplicationTests                : Starting DemoApplicationTests on MacBook-Pro-4.local with PID 53559 (/Users/elieblich/Transaction-App/build/classes/test started by elieblich in /Users/elieblich/Transaction-App)
+2016-07-28 13:58:22.995  INFO 53559 --- [    Test worker] demo.DemoApplicationTests                : No active profile set, falling back to default profiles: default
+2016-07-28 13:58:23.059  INFO 53559 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@795d8542: startup date [Thu Jul 28 13:58:23 EDT 2016]; root of context hierarchy
+2016-07-28 13:58:23.985  INFO 53559 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@795d8542: startup date [Thu Jul 28 13:58:23 EDT 2016]; root of context hierarchy
+2016-07-28 13:58:24.024  INFO 53559 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/]}&quot; onto public org.springframework.http.ResponseEntity&lt;java.util.Hashtable&lt;java.lang.String, model.Person&gt;&gt; controller.PersonController.index()
+2016-07-28 13:58:24.024  INFO 53559 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/{id}]}&quot; onto public model.Person controller.PersonController.getPerson(java.lang.String)
+2016-07-28 13:58:24.025  INFO 53559 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/test]}&quot; onto public org.springframework.http.ResponseEntity&lt;java.lang.String&gt; controller.PersonController.testEndpoint()
+2016-07-28 13:58:24.026  INFO 53559 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/transactions/{id}],methods=[DELETE]}&quot; onto void controller.TransController.remove(java.lang.String)
+2016-07-28 13:58:24.026  INFO 53559 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/transactions],methods=[GET]}&quot; onto public org.springframework.http.ResponseEntity&lt;java.util.ArrayList&lt;java.lang.String&gt;&gt; controller.TransController.transEndpoint()
+2016-07-28 13:58:24.026  INFO 53559 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/transactions],methods=[POST]}&quot; onto void controller.TransController.createTrans(model.Person)
+2016-07-28 13:58:24.027  INFO 53559 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/error]}&quot; onto public org.springframework.http.ResponseEntity&lt;java.util.Map&lt;java.lang.String, java.lang.Object&gt;&gt; org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-07-28 13:58:24.028  INFO 53559 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/error],produces=[text/html]}&quot; onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-07-28 13:58:24.044  INFO 53559 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-28 13:58:24.044  INFO 53559 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-28 13:58:24.068  INFO 53559 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-28 13:58:24.140  INFO 53559 --- [    Test worker] demo.DemoApplicationTests                : Started DemoApplicationTests in 1.713 seconds (JVM running for 2.285)
 </pre>
 </span>
 </div>
@@ -146,7 +148,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 2.14</a> at Jul 27, 2016 11:26:24 AM</p>
+<a href="http://www.gradle.org">Gradle 2.14</a> at Jul 28, 2016 1:58:24 PM</p>
 </div>
 </div>
 </body>
