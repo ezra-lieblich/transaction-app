@@ -5,7 +5,7 @@ package model;
  */
 public class Person {
     String id;
-    String firstName;
+    String name;
     int transaction;
 
     public String getId() {
@@ -16,12 +16,12 @@ public class Person {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getTransaction() {

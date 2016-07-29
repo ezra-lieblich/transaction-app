@@ -3,6 +3,7 @@ package controller;
 /**
  * Created by elieblich on 7/27/16.
  */
+
 import org.apache.catalina.connector.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,12 +13,12 @@ import model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
-import java.util.Hashtable;
 
 @RestController
-@RequestMapping(value = "/transactions")
+@RequestMapping(value = "/trans")
 public class TransController {
     private PersonService ps;
+
     @Autowired
     public void setPs(PersonService ps) {
         this.ps = ps;
@@ -37,19 +38,19 @@ public class TransController {
         ArrayList<String> output = new ArrayList<String>();
         output.add("Pending Transactions Left:");
         for (String id : ps.getPendingTransactions().keySet()) {
-            output.add("{id: " + ps.getPerson(id).getId() + " name: " + ps.getPerson(id).getFirstName() +"}");
+            output.add("{id: " + ps.getPerson(id).getId() + " name: " + ps.getPerson(id).getName() + "}");
         }
         return output;
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    void createTrans(@RequestBody Person person){
+    void createTrans(@RequestBody Person person) {
         ps.addTrans(person);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.OK)
-    void remove(@PathVariable("id") String id){
+    void remove(@PathVariable("id") String id) {
         ps.processTrans(id);
     }
 

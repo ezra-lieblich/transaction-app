@@ -1,7 +1,6 @@
 package demo;
 
-//import config.PersonConfig;
-//import config.PersonConfig;
+
 import controller.PersonController;
 import controller.TransController;
 import org.springframework.boot.SpringApplication;
@@ -18,13 +17,8 @@ import service.PersonService;
 @ComponentScan(basePackageClasses = {PersonController.class, PersonService.class, TransController.class})
 public class DemoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
-		/*
-		ApplicationContext context = new AnnotationConfigApplicationContext(DemoApplication.class);
-		PersonController contr = context.getBean(PersonController.class);
-		contr.setPs(context.getBean(PersonService.class));
-		System.out.println(contr.index());
-		*/
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+
+    }
 }

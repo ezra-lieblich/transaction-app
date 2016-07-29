@@ -3,8 +3,8 @@ package controller;
 /**
  * Created by elieblich on 7/20/16.
  */
+
 import java.util.*;
-//import model.Person;
 
 import org.apache.catalina.connector.Response;
 import org.springframework.http.HttpStatus;
@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PersonController {
 
     private PersonService ps;
+
     @Autowired
     public void setPs(PersonService ps) {
         this.ps = ps;
@@ -30,8 +31,9 @@ public class PersonController {
     public ResponseEntity<Hashtable<String, Person>> index() {
         Hashtable<String, Person> answer = new Hashtable<String, Person>(ps.getAll());
         return ResponseEntity.status(HttpStatus.OK).body(answer);
-        //return ps.getAll();
+
     }
+
     @RequestMapping("{id}")
     public Person getPerson(@PathVariable("id") String id) {
         return ps.getPerson(id);
@@ -45,8 +47,6 @@ public class PersonController {
         }
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Your app is unhealthy \n");
     }
-
-
 
 
 }
