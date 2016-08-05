@@ -18,30 +18,27 @@ public class PersonService {
 
     public PersonService() {
         Person p = new Person();
-        p.setId("1");
         p.setTransaction(21);
         p.setName("ezra");
-        transactions.put("1", p);
-        pending_transactions.put("1", p);
+        transactions.put("ezra", p);
+        pending_transactions.put("ezra", p);
 
         p = new Person();
-        p.setId("2");
         p.setTransaction(18);
         p.setName("maxine");
-        transactions.put("2", p);
-        pending_transactions.put("2", p);
+        transactions.put("maxine", p);
+        pending_transactions.put("maxine", p);
 
         p = new Person();
-        p.setId("3");
         p.setTransaction(50);
         p.setName("john");
-        transactions.put("3", p);
-        pending_transactions.put("3", p);
+        transactions.put("john", p);
+        pending_transactions.put("john", p);
     }
 
-    public Person getPerson(String id) {
-        if (transactions.containsKey(id))
-            return transactions.get(id);
+    public Person getPerson(String name) {
+        if (transactions.containsKey(name))
+            return transactions.get(name);
         else
             return null;
     }
@@ -54,13 +51,13 @@ public class PersonService {
         return pending_transactions;
     }
 
-    public Hashtable<String, Person> processTrans(String id) {
-        pending_transactions.remove(id);
+    public Hashtable<String, Person> processTrans(String name) {
+        pending_transactions.remove(name);
         return pending_transactions;
     }
 
     public void addTrans(Person person) {
-        transactions.put(person.getId(), person);
-        pending_transactions.put(person.getId(), person);
+        transactions.put(person.getName(), person);
+        pending_transactions.put(person.getName(), person);
     }
 }

@@ -12,6 +12,9 @@ import service.PersonService;
 import model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 
 @RestController
@@ -24,34 +27,57 @@ public class TransController {
         this.ps = ps;
     }
 
-    @RequestMapping(method = RequestMethod.GET)
-    @ResponseBody
-    public ResponseEntity<ArrayList<String>> transEndpoint() {
-        String[] array = ps.getPendingTransactions().keySet().toArray(new String[ps.getAll().size()]);
-        if (ps.getPendingTransactions().size() != 0) {
-            return ResponseEntity.status(HttpStatus.OK).body(transactionOutput());
-        }
-        return ResponseEntity.status(HttpStatus.NO_CONTENT).body(new ArrayList<String>());
+    public void getSession(HttpServletRequest request){
+        request.getSession(true);
     }
 
-    public ArrayList<String> transactionOutput() {
+    @RequestMapping(method = RequestMethod.GET)
+    @ResponseBody
+    public ResponseEntity<ArrayList<String>> transEndpoint(HttpServletRequest request) {
+        getSession(request);
+        String[] array = ps.getPendingTransactions().keySet().toArray(new String[ps.getAll().size()]);
+        if (ps.getPendingTransactions().size() != 0) {  //check if there are pending transactions
+            return ResponseEntity.status(HttpStatus.OK).body(transactionOutput(request));
+        }
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).body(new ArrayList<String>());
+
+    }
+
+
+    public ArrayList<String> transactionOutput(HttpServletRequest request) {
         ArrayList<String> output = new ArrayList<String>();
         output.add("Pending Transactions Left:");
-        for (String id : ps.getPendingTransactions().keySet()) {
-            output.add("{id: " + ps.getPerson(id).getId() + " name: " + ps.getPerson(id).getName() + "}");
+        String index = System.getenv("CF_INSTANCE_INDEX");
+        for (String name : ps.getPendingTransactions().keySet()) {
+            output.add("{name: " + name + ", transaction: " + ps.getPerson(name).getTransaction() + "}");
         }
+        output.add(index);
         return output;
     }
 
+    @RequestMapping(value = "/cookie", method = RequestMethod.GET)
+    @ResponseBody
+    public ResponseEntity<ArrayList<String>> cookie(HttpServletRequest request) {
+        getSession(request);
+        ArrayList<String> output = new ArrayList<String>();
+        for (int i = 0; i<request.getCookies().length; i++){
+            //if (request.getCookies()[i].getName() == "__VCAP_ID__" || request.getCookies()[i].getName() == "JSESSIONID")
+            output.add(request.getCookies()[i].getName()+"="+ request.getCookies()[i].getValue());
+        }
+        return ResponseEntity.status(HttpStatus.OK).body(output);
+    }
+
     @RequestMapping(method = RequestMethod.POST)
-    void createTrans(@RequestBody Person person) {
+    void createTrans(@RequestBody Person person, HttpServletRequest request) {
+        getSession(request);
         ps.addTrans(person);
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/{name}", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.OK)
-    void remove(@PathVariable("id") String id) {
-        ps.processTrans(id);
+    public void remove(@PathVariable("name") String name, HttpServletRequest request) {
+        getSession(request);
+        ps.processTrans(name);
     }
 
 
