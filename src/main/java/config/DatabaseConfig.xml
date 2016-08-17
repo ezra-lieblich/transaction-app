@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/tool"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tool http://www.springframework.org/schema/tool/spring-tool.xsd">
+
+
+        <context:annotation-config/>
+        <context:component-scan base-package="main.java.demo"/>
+    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+        <property name="driverClassName" value="org.apache.derby.jdbc.ClientDriver"/>
+        <property name="url" value="jdbc:derby://localhost:1527/firstdb;create=true"/>
+    </bean>
+</beans>

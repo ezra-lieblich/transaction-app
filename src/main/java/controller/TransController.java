@@ -4,7 +4,7 @@ package controller;
  * Created by elieblich on 7/27/16.
  */
 
-import org.apache.catalina.connector.Response;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
